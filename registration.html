@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="/imaages/tashaa titlebar.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="cards.css">
+  <style>
+    textarea{
+  display: block;
+}
+.form{
+  width: 100%;
+  height: 100%;
+}
+.form-items{
+  width:1200px;
+  background-color:white;
+  justify-self: center;
+}
+.form-items h1{
+  justify-self: center;
+  color: #090920;
+}
+
+.form-items input{
+  justify-self: center;
+  display: block;
+  width: 98%;
+  height:50px;
+  border: none;
+  margin-top: 10px;
+  border-bottom: 1px solid #090920;
+  appearance: none;
+}
+input:focus{
+  outline: none;
+}
+.form-items select{
+  display: block;
+  width: 98%;
+  justify-self: center;
+  height:50px;
+  border: none;
+  border-bottom: 1px solid #090920;
+  margin-top: 10px;
+}
+select:focus{
+  outline: none;
+}
+.form-items textarea{
+  justify-self: center;
+  border: none;
+  border-bottom: 1px solid #090920;
+
+  width: 98%;
+}
+.form-items textarea:focus{
+  outline: none;
+}
+#s5{
+  height: 100px;
+}
+#s6{
+  height: 50px;
+}
+#s6{
+  height: 50px;
+}
+#s7{
+  height:50px;
+}
+#s8{
+  height:200px;
+}
+.form-items label{
+  margin-left: 1%;
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+  color: #090920;
+}
+.form-items span{
+  display: block;
+  color: red;
+  margin-left: 1%;
+}
+.form-items #submit{
+  width: 150px;
+  border: none;
+  border-radius:120px;
+  background-color:#090920;
+  color: white ;
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/* responsiveness */
+@media only screen and (max-width: 1200px) {
+  .form-items input{
+    justify-self: center;
+    display: block;
+    width:80%;
+    height:50px;
+    border: none;
+    margin-top: 10px;
+    border-bottom: 1px solid #090920;
+    appearance: none;
+  }
+
+  .form-items label{
+    margin-left: 10%;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    color: #090920;
+  }
+  .form-items select{
+    display: block;
+    width: 80%;
+    justify-self: center;
+    height:50px;
+    border: none;
+    border-bottom: 1px solid #090920;
+    margin-top: 10px;
+  }
+  .form-items textarea{
+    justify-self: center;
+    border: none;
+    border-bottom: 1px solid #090920;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .form-items input{
+    justify-self: center;
+    display: block;
+    width:70%;
+    height:50px;
+    border: none;
+    margin-top: 10px;
+    border-bottom: 1px solid #090920;
+    appearance: none;
+  }
+
+  .form-items label{
+    margin-left:15%;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    color: #090920;
+  }
+  .form-items select{
+    display: block;
+    width: 70%;
+    justify-self: center;
+    height:50px;
+    border: none;
+    background-color:none;
+    border-bottom: 1px solid #090920;
+    margin-top: 10px;
+  }
+  .form-items textarea{
+    justify-self: center;
+    border: none;
+    border-bottom: 1px solid #090920;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .form-items input{
+   margin-left:10%;
+   
+  }
+
+  .form-items label{
+    margin-left:20%;
+   
+  }
+  .form-items select{
+    margin-left:10%;
+  
+  }
+  .form-items textarea{
+    margin-left:10%;
+   
+  }
+}
+
+@media only screen and (max-width: 750px){
+  .form-items input{
+    margin-left:17%;
+    width: 60%;
+    
+   }
+ 
+   .form-items label{
+     margin-left:28%;
+    
+   }
+   .form-items select{
+     margin-left:17%;
+     width: 60%;
+   
+   }
+   .form-items textarea{
+     margin-left:17%;
+     width: 60%;
+   }
+}
+@media only screen and (max-width: 550px){
+  .form-items input{
+    margin-left:17%;
+    width:50%;
+    
+   }
+ 
+   .form-items label{
+     margin-left:33%;
+    
+   }
+   .form-items select{
+     margin-left:17%;
+     width: 50%;
+   
+   }
+   .form-items textarea{
+     margin-left:17%;
+     width: 50%;
+   }
+}
+
+@media only screen and (max-width: 400px){
+  .form-items input{
+    margin-left:28%;
+    width:40%;
+    
+   }
+ 
+   .form-items label{
+     margin-left:44%;
+    
+   }
+   .form-items select{
+     margin-left:28%;
+     width: 40%;
+   
+   }
+   .form-items textarea{
+     margin-left:28%;
+     width:40%;
+   }
+}
+  </style>
+</head>
+<body>
+       <form id="form" action="index1 (1).html">
+      <div class="form-items">
+       <h1>Complaint Registration Form</h1>
+       <label for="s1">Name*</label>
+       <input type="name" id="s1">
+        <span id="error-name"></span>
+        <label for="s2">Surname*</label>
+        <input type="name"   id="s2">
+       <span id="error-surname" ></span>   
+       <label for="s3">email*</label>
+       <input type="email" id="s3" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/">
+       <span id="error-email" ></span>
+       <label for="s4">Contect*</label>
+      <input type="number"   id="s4">
+        <span id="error-number"></span>
+
+          <label for="province">Select province*</label>
+          <select id="province" name="province">
+            <option value="">Choose a province</option>
+            <option value="USA">Sindh</option>
+            <option value="CAN">Panjab</option>
+            <option value="IND">Balochistan</option>
+            <option value="AUS">khaber pakhtunkhuwa</option>
+            <option value="AUS">Azad Kashmir</option>
+          </select>
+    
+            <label for="country">Select City*</label>
+            <select id="city" name="city">
+              <option value="">Choose a city</option>
+              <option value="USA">Karachi</option>
+              <option value="CAN">peshwar</option>
+              <option value="IND">lahore</option>
+              <option value="AUS">hadrabad</option>
+              <option value="AUS">faislabad</option>
+            </select>
+            <label for="country">Address*</label>
+            <textarea name="comment"  id="s5"></textarea>
+            <span id="error-address"></span>
+            <label for="country">Product*</label>
+            <textarea name="comment" id="s6"></textarea>
+            <span id="error-product"></span>
+            <label for="country">Product complain*</label>
+            <textarea name="comment" id="s7"></textarea>
+            <span id="error-complain"></span>
+            <label for="country">Message*</label>
+            <textarea name="comment" id="s8"></textarea>
+            <span id="error-message"></span>
+        <input type="submit" value="Send Message" id="submit">
+       </form>
+      </div>
+
+     
+      <script>
+        
+ let a = document.getElementById('s1')
+ let b = document.getElementById('s2')
+ let c = document.getElementById('s3')
+ let d = document.getElementById('s4')
+ let e = document.getElementById('s5')
+ let f = document.getElementById('s6')
+ let g = document.getElementById('s7')
+ let h = document.getElementById('s8')
+ let form = document.getElementById('form')
+ let span1 =document.getElementById('error-name')
+ let span2 =document.getElementById('error-surname')
+ let span3 =document.getElementById('error-email')
+ let span4= document.getElementById('error-number')
+ let span5 =document.getElementById('error-address')
+ let span6= document.getElementById('error-product')
+ let span7= document.getElementById('error-complain') 
+ let span8= document.getElementById('error-message') 
+ form.addEventListener('submit',(e)=>{
+  if(a.value=="" || a.value==null ){
+   e.preventDefault()
+    span1.innerHTML = "Name is required"
+  };
+  if(b.value=="" || b.value==null){
+    e.preventDefault()
+    span2.innerHTML ="Surname is required"
+  }
+  
+  if(c.value=="" || c.value==null){
+    e.preventDefault()
+    span3.innerHTML ="email is required"
+  }
+  if(d.value.length < 11 || d.value.length < 11){
+         e.preventDefault()
+          span4.innerHTML ="This field is mandatory"
+        }
+
+ if(e.value=="" || e.value==null){
+   e.preventDefault()
+          span5.innerHTML ="Pleace enter your address"
+ }
+ if(f.value=="" || f.value==null){
+  e.preventDefault()
+         span6.innerHTML ="Pleace enter your Product name"
+}
+if(g.value=="" || g.value==null){
+  e.preventDefault()
+         span7.innerHTML ="Pleace enter your complain"
+}
+if(h.value=="" || h.value==null){
+  e.preventDefault()
+         span8.innerHTML ="Pleace enter your massage"
+}
+})
+
+
+
+
+      </script>
+</body>
+</html>
