@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Expertise | Tashaa</title>
+  <link rel="shortcut icon" href="/imaages/tashaa titlebar.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="cards.css">
+  <style>
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 50%;
+      margin-right: 50%;
+
+      ali.card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      height: 500px;
+      width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      opacity: 1;
+    }
+
+    .card:hover .overlay {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+  <!--navbar-->
+  <div class="nav">
+    <marquee scrollamount="7">
+      <div class="container">
+        <h3 class="title">
+          <span class="title-word title-word-1">WELCOME</span>
+          <span class="title-word title-word-2">TO</span>
+          <span class="title-word title-word-3">TASHAA</span>
+        </h3>
+      </div>
+    </marquee>
+
+    <div class="support">
+      <ul>
+        <li class="dropdown"><a href="/home.html">HOME</a></li>
+        <li class="dropdown"><a href="#">SUPPORT <i class="fa-solid fa-chevron-down"></i></a>
+          <div id="list-support">
+            <ul>
+              <li><a href="manuals.html"> Manuals</a></li>
+              <li> <a href="expert-tips.html">Expert-Tips</a></li>
+              <li> <a href="registration.html">Register Complain</a></li>
+              <li> <a href="contact-us.html">Contact Us</a></li>
+              <li> <a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="dropdown"><a href="/store-locator.html">STORE LOCATOR</a></li>
+        <div class="side" id="cart">
+          <div id="cart-icon" onclick="toggleCart()">&#128722;&#xfe0e;</div>
+          <a href="#">Cart</a>
+          <span id="cart-count">0</span>
+        </div>
+        <div class="side" id="account">
+          <div id="accountimg">&#128104;&#xfe0e;</div>
+          <a id="accountimg" href="#">Account</a>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div id="loginModal" class="Modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal"> &times;</span>
+      <h2 id="modalTitle">Login</h2>
+      <form id="authForm">
+        <input type="text" id="userId" placeholder="User ID" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit" id="authbutton">Login</button>
+      </form>
+      <p id="toggletext">
+        Don't have an account? <a href="#" id="togglelink">Create Account</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="logo">
+    <img src="/imaages/tasha-logo.png" alt="Tashaa Logo">
+  </div>
+
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+    <ul>
+      <li class="dropdown"><a href="/next-in-line.html" class="catg">UPCOMING PRODUCT</a></li>
+      <li class="dropdown">
+        <a href="cooking-ware.html" class="catg">COOKING WARE <i class="fa-solid fa-chevron-down"></i></a>
+        <div id="list-COOKINGWARE">
+          <div class="dropdown-img"><img src="/imaages/cookingware/set.png" alt=""></div>
+
+          <ul>
+            <li><a href="/Cooking pots.html"> Cooking pots</a></li>
+            <li> <a href="/Cooking Pans.html">Cooking Pans</a></li>
+            <li><a href="/Frying Pans.html Pans.html">Frying Pans</a></li>
+            <li><a href="/Cookware Sets.html">Cookware Sets</a></li>
+            <li><a href="/Handis.html">Handis</a></li>
+          </ul>
+          <ul>
+            <li><a href="/Kadais.html"> Kadais [Karahi]</a></li>
+            <li><a href="/Grill pans.html">Grill pans</a> </li>
+            <li><a href="/Tawas.htm">Tawas</a></li>
+            <li> <a href="/Egg Poachers.html">Egg Poachers</a></li>
+            <li><a href="/Steamers.html">Steamers</a> </li>
+          </ul>
+        </div>
+      </li>
+      <li class="dropdown"><a href="/refrigeration.html" class="catg">REFRIGERATION <i
+            class="fa-solid fa-chevron-down"></i></a>
+        <div id="list-refrigeration">
+          <div class="dropdown-img"><img src="/imaages/Refrigerator/3.jpg" alt=""></div>
+          <ul>
+            <li><a href="/refrigerators.html"> Refrigerator</a></li>
+            <li> <a href="/freezers">Freezer</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="dropdown"><a href="/appliances.html" class="catg">APPLIANCES <i
+            class="fa-solid fa-chevron-down"></i></a>
+        <div id="list-appliances">
+          <div class="dropdown-img"><img src="/imaages/appliances/1.jpg" alt=""></div>
+          <ul>
+            <li><a href="/Blenders.html"> Blenders</a></li>
+            <li> <a href="/Coffee makers.html">Coffee makers</a></li>
+            <li><a href="/bread makers.html">Bread makers</a></li>
+            <li><a href="/Electric kettles.html">Electric kettles</a></li>
+            <li><a href="/Food choppers.html">Food choppers</a></li>
+            <li><a href="/Toasters.html">Toasters</a> </li>
+          </ul>
+        </div>
+      </li>
+      <li class="dropdown"><a href="/food-storage.html" class="catg">FOOD STORAGE <i
+            class="fa-solid fa-chevron-down"></i></a>
+        <div id="list-storage">
+          <div class="dropdown-img"><img src="/imaages/food strage/jars/food (3).jpg" alt=""></div>
+          <ul>
+            <li><a href="/Blenders.html"> Blenders</a></li>
+            <li> <a href="/Coffee makers.html">Coffee makers</a></li>
+            <li><a href="/bread makers.html">Bread makers</a></li>
+            <li><a href="/Electric kettles.html">Electric kettles</a></li>
+            <li><a href="/Food choppers.html">Food choppers</a></li>
+            <li><a href="/Toasters.html">Toasters</a> </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="search"><input type="search" placeholder="search">
+      <!-- <i class='bx bx-search'></i> -->
+    </div>
+    </div>
+    <div id="cart-container" style="display: none;">
+      <h1 id="cart-head"> YOUR SHOPPING CART!!!</h1> <br>
+      <div id="cart-items"></div>
+      <div class="btnn">
+        <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+        <button id="checkout">Checkout</button>
+        <button id="close-cart" onclick="toggleCart()">Close Cart</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <!-- <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slides"><a href="/next-in-line.html"><img src="imaages/next il line/2.jpg" alt="Image 1"></a></div>
+      <div class="slides"><a href="/next-in-line.html"><img src="imaages/next il line/11.jpg" alt="Image 2"></a></div>
+      <div class="slides"><a href="next-in-line.html"><img src="imaages/next il line/3.jpg" alt="Image 3"></a></div>
+      <div class="slides"><a href="/next-in-line.html"><img src="imaages/next il line/4.jpg" alt="Image 4"></a></div>
+        </div>
+    </div> -->
+  <!--cards-->
+  <div class="card-container">
+    <a href="/ET-refrigeration.html" class="card">
+      <img src="imaages/Refrigerator/6.jpg" alt="Card 1">
+      <div class="overlay">Keep it Fresh and Cool: Explore Refrigerators & Freezers Guide</div>
+    </a>
+    <a href="ET-cookware.html" class="card">
+      <img src="imaages/cookingware/sets.jpg" alt="Card 2">
+      <div class="overlay">Master Every Recipe: Your Guide to Cookware Essentials</div>
+    </a>
+    <a href="ET-appliances.html" class="card">
+      <img src="imaages/appliances/blenders/blender (6).jpg" alt="Card 3">
+      <div class="overlay">Upgrade Your Cooking Game: Top Kitchen Appliances Guide</div>
+    </a>
+    <a href="ET-storage.html" class="card">
+      <img src="imaages/food strage/jars/food (2).jpg" alt="Card 4">
+      <div class="overlay">Store Smart, Save More: Food Storage Solutions Guide</div>
+    </a>
+  </div>
+
+  <!--footer-->
+  <button id="scrollBtn" class="scroll-btn" onclick="scrollToTop()">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-main-tittle">
+        <div class="typewriter">
+          <h1>Tashaa</h1>
+          <h1 id="store">The home store</h1>
+        </div>
+
+      </div>
+      <div class="footer-products">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="cooking-ware.html">Cooking Ware</a></li>
+          <li><a href="refrigeration.html">Refrigeration</a></li>
+          <li><a href="applainces.html">Applainces</a></li>
+          <li><a href="food-storage.html">Food Storage</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-support">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="manuals.html">Manuals</a></li>
+          <li><a href="expert-tips.html">Expert Tips</a></li>
+          <li><a href="registration.html">Register Complain</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contect">
+        <div class="contect-apps">
+          <ul>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-youtube'></i>
+          </ul>
+        </div>
+        <div class="contect-tittle">
+          <ul>
+            <a href="#">
+              <li class="small">Whatsapp Support Line</li>
+            </a>
+            <a href="#">
+              <li>+92-311-111-7359</li>
+            </a>
+          </ul>
+        </div>
+        <div class="contect-tittle">
+          <ul>
+            <a href="#">
+              <li class="small">7/24 Customer Support</li>
+            </a>
+            <a href="#">
+              <li>021 111 11 7359</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-additional">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    const slider = document.getElementById('slider');
+    const totalSlides = document.querySelectorAll('#slider .slide').length;
+    let currentIndex = 0;
+
+    function showNextSlide() {
+      for (let i = 0; i <= 3; i++) {
+        if (i === currentIndex) {
+          slider.style.transform = `translateX(-${i * 100}%)`;
+          console.log('Current index:', i);
+        }
+      }
+
+      currentIndex = (currentIndex + 1) % 3;
+    }
+    setInterval(showNextSlide, 5000);
+    showNextSlide();
+
+    const slider1 = document.getElementById('slider1');
+    const totalSlides1 = document.querySelectorAll('#slider1 .slides').length;
+    let currentIndex1 = 0;
+
+    function showNextSlide1() {
+      const slides1 = document.querySelectorAll('#slider1 .slides');
+
+      for (let i = 0; i < totalSlides1; i++) {
+        if (i === currentIndex1) {
+          slider1.style.transform = `translateX(-${i * 100}%)`;
+          console.log('Current index for slider1:', i);
+        }
+      }
+
+      currentIndex1 = (currentIndex1 + 1) % totalSlides1;
+    }
+
+    setInterval(showNextSlide1, 5000);
+    showNextSlide1();
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const loginmodal = document.getElementById("loginModal");
+      const accountimg = document.getElementById("accountimg");
+      const authbutton = document.getElementById("authbutton");
+      const toggletext = document.getElementById("toggletext");
+      const authForm = document.getElementById("authForm");
+      const userIdInput = document.getElementById("userId");
+      const passwordInput = document.getElementById("password");
+      const togglelink = document.getElementById("togglelink");
+      const closeModal = document.getElementById("closeModal");
+      const modalTitle = document.getElementById("modalTitle");
+
+      let isLoginMode = true;
+
+      accountimg.addEventListener("click", () => {
+        loginmodal.style.display = "flex";
+      });
+
+      closeModal.addEventListener("click", () => {
+        loginmodal.style.display = "none";
+      });
+
+      toggletext.addEventListener("click", (e) => {
+        e.preventDefault();
+        isLoginMode = !isLoginMode;
+
+        if (isLoginMode) {
+          modalTitle.textContent = "Login";
+          authbutton.textContent = "Login";
+          toggletext.innerHTML = `Don't have an account? <a href="#" id="togglelink">Create Account</a>`;
+        } else {
+          modalTitle.textContent = "Create Account";
+          authbutton.textContent = "Sign up";
+          toggletext.innerHTML = `Already have an account? <a href="#" id="togglelink">Login</a>`;
+        }
+      });
+
+      authForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const userId = userIdInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (!userId || !password) {
+          alert("Both fields are required.");
+          return;
+        }
+
+        if (isLoginMode) {
+          const storedUserId = localStorage.getItem("userid");
+          const storedPassword = localStorage.getItem("password");
+
+          if (storedUserId === userId && storedPassword === password) {
+            alert("Login successful");
+            loginModal.style.display = "none";
+          } else {
+            alert("Invalid credentials, please try again.");
+          }
+        } else {
+          localStorage.setItem("userid", userId);
+          localStorage.setItem("password", password);
+          alert("Account created successfully!");
+          isLoginMode = true;
+          modalTitle.textContent = "Login";
+          authButton.textContent = "Login";
+          toggleText.innerHTML = `Don't have an account? <a href="#" id="togglelink">Create Account</a>`;
+        }
+
+        userIdInput.value = "";
+        passwordInput.value = "";
+      });
+    });
+
+    window.onload = function() {
+  updateCartCount(); // Ensure the cart count is updated on page load
+};
+
+
+  </script>
+</body>
+
+</html>
