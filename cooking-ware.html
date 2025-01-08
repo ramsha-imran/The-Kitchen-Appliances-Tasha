@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookingware|Tashaa</title>
+    <link rel="shortcut icon" href="/imaages/tashaa titlebar.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="cards.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <marquee scrollamount="7">
+            <div class="container">
+                <h3 class="title">
+                    <span class="title-word title-word-1">WELCOME</span>
+                    <span class="title-word title-word-2">TO</span>
+                    <span class="title-word title-word-3">TASHAA</span>
+                </h3>
+            </div>
+        </marquee>
+
+        <div class="support">
+            <ul>
+                <li class="dropdown"><a href="/home.html">HOME</a></li>
+                <li class="dropdown"><a href="#">SUPPORT <i class="fa-solid fa-chevron-down"></i></a>
+                    <div id="list-support">
+                        <ul>
+                            <li><a href="manuals.html"> Manuals</a></li>
+                            <li> <a href="expert-tips.html">Expert-Tips</a></li>
+                            <li> <a href="registration.html">Register Complain</a></li>
+                            <li> <a href="contact-us.html">Contact Us</a></li>
+                            <li> <a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="/store-locator.html">STORE LOCATOR</a></li>
+                <div class="side" id="cart" >
+                    <div id="cart-icon" onclick="toggleCart()">&#128722;&#xfe0e;</div>
+                    <a href="#">Cart</a>
+                    <span id="cart-count">0</span>
+                </div>
+                <div class="side" id="account">
+                    <div id="accountimg">&#128104;&#xfe0e;</div>
+                    <a id="accountimg" href="#">Account</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div id="loginModal" class="Modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal"> &times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <form id="authForm">
+                <input type="text" id="userId" placeholder="User ID" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit" id="authbutton">Login</button>
+            </form>
+            <p id="toggletext">
+                Don't have an account? <a href="#" id="togglelink">Create Account</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="/imaages/tasha-logo.png" alt="Tashaa Logo">
+    </div>
+
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+        <ul>
+          <li class="dropdown"><a href="/next-in-line.html" class="catg">UPCOMING PRODUCT</a></li>
+          <li class="dropdown">
+            <a href="cooking-ware.html" class="catg">COOKING WARE <i class="fa-solid fa-chevron-down"></i></a>
+            <div id="list-COOKINGWARE">
+              <div class="dropdown-img"><img src="/imaages/cookingware/set.png" alt=""></div>
+    
+              <ul>
+                <li><a href="/Cooking pots.html"> Cooking pots</a></li>
+                <li> <a href="/Cooking Pans.html">Cooking Pans</a></li>
+                <li><a href="/Frying Pans.html Pans.html">Frying Pans</a></li>
+                <li><a href="/Cookware Sets.html">Cookware Sets</a></li>
+                <li><a href="/Handis.html">Handis</a></li>
+              </ul>
+              <ul>
+                <li><a href="/Kadais.html"> Kadais [Karahi]</a></li>
+                <li><a href="/Grill pans.html">Grill pans</a> </li>
+                <li><a href="/Tawas.htm">Tawas</a></li>
+                <li> <a href="/Egg Poachers.html">Egg Poachers</a></li>
+                <li><a href="/Steamers.html">Steamers</a> </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown"><a href="/refrigeration.html" class="catg">REFRIGERATION <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <div id="list-refrigeration">
+              <div class="dropdown-img"><img src="/imaages/Refrigerator/3.jpg" alt=""></div>
+              <ul>
+                <li><a href="/refrigerators.html"> Refrigerator</a></li>
+                <li> <a href="/freezers">Freezer</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown"><a href="/appliances.html" class="catg">APPLIANCES <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <div id="list-appliances">
+              <div class="dropdown-img"><img src="/imaages/appliances/1.jpg" alt=""></div>
+              <ul>
+                <li><a href="/Blenders.html"> Blenders</a></li>
+                <li> <a href="/Coffee makers.html">Coffee makers</a></li>
+                <li><a href="/bread makers.html">Bread makers</a></li>
+                <li><a href="/Electric kettles.html">Electric kettles</a></li>
+                <li><a href="/Food choppers.html">Food choppers</a></li>
+                <li><a href="/Toasters.html">Toasters</a> </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown"><a href="/food-storage.html" class="catg">FOOD STORAGE <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <div id="list-storage">
+              <div class="dropdown-img"><img src="/imaages/food strage/jars/food (3).jpg" alt=""></div>
+              <ul>
+                <li><a href="/Blenders.html"> Blenders</a></li>
+                <li> <a href="/Coffee makers.html">Coffee makers</a></li>
+                <li><a href="/bread makers.html">Bread makers</a></li>
+                <li><a href="/Electric kettles.html">Electric kettles</a></li>
+                <li><a href="/Food choppers.html">Food choppers</a></li>
+                <li><a href="/Toasters.html">Toasters</a> </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="search"><input type="search" placeholder="search">
+          <!-- <i class='bx bx-search'></i> -->
+        </div>
+      </nav>
+      <div id="cart-container" style="display: none;">
+        <h1 id="cart-head"> YOUR SHOPPING CART!!!</h1> <br>
+        <div id="cart-items"></div>
+        <div class="btnn">
+        <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+        <button id="checkout">Checkout</button>
+        <button id="close-cart" onclick="toggleCart()">Close Cart</button></div>
+    </div>
+    
+    <!-- SLIDER -->
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="/imaages/cookingware/slider.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="imaages/cookingware/sliderr.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="imaages/cookingware/slider3.jpg" alt="Image 3"></div>
+        </div>
+    </div>
+
+    <div id="heading">
+        <h1>Cooking Ware</h1>
+    </div>
+    <!-- sidebar -->
+    <div class="cookingware-container">
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <div class="sidebar-items">
+                <div class="sidebar-item">
+                    <li><a href="/Cooking Pans.html">Cooking Pans </a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Frying Pans.html">Frying Pans</a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Cookware Sets.html">Cookware Sets </a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Cooking pots.html">Cooking Pots </a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Kadais.html">Kadais (karahi)</a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Handis.html">Handis</a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Grill pans.html">Grill pans</a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Tawas.html">Tawas</a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Egg Poachers.html">Egg Poachers</a></li>
+                </div>
+                <div class="sidebar-item">
+                    <li><a href="/Steamers.html">Steamers</a></li>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div id="product-card">
+
+            </div>
+        </main>
+    </div>
+    <button id="scrollBtn" class="scroll-btn" onclick="scrollToTop()">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-main-tittle">
+            <div class="typewriter">
+                <h1>Tashaa</h1>
+                <h1 id="store">The home store</h1>
+            </div>
+
+        </div>
+        <div class="footer-products">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="cooking-ware.html">Cooking Ware</a></li>
+                <li><a href="refrigeration.html">Refrigeration</a></li>
+                <li><a href="applainces.html">Applainces</a></li>
+                <li><a href="food-storage.html">Food Storage</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-support">
+            <h3>Customer Support</h3>
+            <ul>
+                <li><a href="manuals.html">Manuals</a></li>
+                <li><a href="expert-tips.html">Expert Tips</a></li>
+                <li><a href="registration.html">Register Complain</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contect">
+            <div class="contect-apps">
+                <ul>
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-youtube'></i>
+                </ul>
+            </div>
+            <div class="contect-tittle">
+                <ul>
+                    <a href="#">
+                        <li class="small">Whatsapp Support Line</li>
+                    </a>
+                    <a href="#">
+                        <li>+92-311-111-7359</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="contect-tittle">
+                <ul>
+                    <a href="#">
+                        <li class="small">7/24 Customer Support</li>
+                    </a>
+                    <a href="#">
+                        <li>021 111 11 7359</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-additional">
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            currentIndex++;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+
+            const slider = document.getElementById('slider');
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+
+        setInterval(showNextSlide, 5000);
+
+
+        showNextSlide();
+        let products = [
+
+        
+    {
+        id: 32,
+        category: "pots",
+        imageUrl: "imaages/cookingware/pots/4.jpg",
+        name: "Ceramic Pot",
+        description: "Sleek and durable ceramic pot, perfect for daily use and decoration.",
+        price: "Price: $29.99"
+    },
+    {
+        id: 33,
+        category: "pots",
+        imageUrl: "imaages/cookingware/pots/7.webp",
+        name: "Cooking Pots",
+        description: "Durable off-white cooking pots, perfect for everyday meals and stylish kitchen décor.",
+        price: "Price: $25"
+    },
+    {
+        id: 34,
+        category: "frying pans",
+        imageUrl: "imaages/cookingware/frying pans/2.jpg",
+        name: "Frying Pan",
+        description: "Premium frying pan with a non-stick surface, designed for even heat distribution and easy cooking.",
+        price: "Price: $30"
+    },
+    {
+        id: 35,
+        category: "frying pans",
+        imageUrl: "imaages/cookingware/frying pans/7.jpg",
+        name: "Frying Pan",
+        description: "Durable frying pan with a smooth, non-stick coating, perfect for effortless cooking and easy cleanup.",
+        price: "Price: $15"
+    },
+    {
+        id: 36,
+        category: "karahi",
+        imageUrl: "imaages/cookingware/karahis/karahi 1.jpg",
+        name: "Kadais",
+        description: "Quality handis and kadais, ideal for cooking and serving flavorful meals.",
+        price: "Price: $25"
+    },
+    {
+        id: 37,
+        category: "tawa",
+        imageUrl: "imaages/cookingware/tawa/tawa4.png",
+        name: "Tawa",
+        description: "Durable tawa for even cooking, perfect for making flatbreads and frying.",
+        price: "Price: $20"
+    },
+    {
+        id: 38,
+        category: "grill pan",
+        imageUrl: "imaages/cookingware/grill pans/grill pan 6.jpg",
+        name: "Grill Frying Pan",
+        description: "Non-stick grill frying pan, perfect for cooking with grill marks and even heat distribution.",
+        price: "Price: $35"
+    },
+    {
+        id: 39,
+        category: "Egg Poacher",
+        imageUrl: "imaages/cookingware/egg/egg 4.jpg",
+        name: "Egg Poacher",
+        description: "Efficient egg poacher for perfectly cooked eggs every time.",
+        price: " Price: $18"
+    }
+]
+
+function displayProductCards() {
+    const container = document.getElementById('product-card');
+    products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        card.innerHTML = `
+            <a href="details.html?id=${product.id}">
+                <img src="${product.imageUrl}" alt="${product.name}" class="product-image">
+            </a>
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <h4>${product.price}</h4>
+            <button onclick="addToCart(${product.id})">Add to Cart</button>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+        const existingProduct = cart.find(item => item.id === productId);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            product.quantity = 1; 
+            cart.push(product);
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+    }
+}
+
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = cart.length;
+    const cartCountElement = document.getElementById('cart-count');
+    const cartBadge = document.getElementById('cart-count');
+
+    if (cartCountElement) {
+        cartCountElement.innerText = cartCount;
+    } if (cartCount > 0) {
+        cartBadge.classList.add('visible');
+    } else {
+        cartBadge.classList.remove('visible');
+    }
+}
+
+function toggleCart() {
+    const cartContainer = document.getElementById('cart-container');
+    if (cartContainer.style.display === 'none') {
+        cartContainer.style.display = 'block';
+        displayCart(); 
+    } else {
+        cartContainer.style.display = 'none';
+    }
+}
+function displayCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; 
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p id="cart-para">Your cart is empty.</p>';
+    } else {
+        let totalAmount = 0;
+
+        cart.forEach(item => {
+            const itemPrice = parseFloat(item.price.replace('Price: $', ''));
+            totalAmount += itemPrice * item.quantity; 
+
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <img src="${item.imageUrl}" alt="${item.name}" class="product-image">
+                <h4>${item.name}</h4>
+                <p>Price: $${itemPrice.toFixed(2)}</p>
+                <p>
+                  
+                    <button class="qty-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
+                    <span>${item.quantity}</span>
+                    <button class="qty-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
+                </p>
+            `;
+
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        const totalDisplay = document.createElement('div');
+        totalDisplay.className = 'cart-total';
+        totalDisplay.innerHTML = `<h3>Total Amount: $${totalAmount.toFixed(2)}</h3>`;
+        cartItemsContainer.appendChild(totalDisplay);
+    }
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    displayCart(); 
+    updateCartCount();
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    displayProductCards();
+    updateCartCount();
+});
+if (window.location.pathname.includes('cart')) {
+    displayCart();
+}
+
+
+if (window.location.pathname.includes('cart')) {
+    displayCart();
+}
+    
+function changeQuantity(productId, change) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = cart.find(item => item.id === productId);
+
+    if (product) {
+        product.quantity += change;
+
+        if (product.quantity <= 0) {
+            cart = cart.filter(item => item.id !== productId);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        
+        displayCart();
+        updateCartCount();
+    }
+}
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginmodal = document.getElementById("loginModal");
+            const accountimg = document.getElementById("accountimg");
+            const authbutton = document.getElementById("authbutton");
+            const toggletext = document.getElementById("toggletext");
+            const authForm = document.getElementById("authForm");
+            const userIdInput = document.getElementById("userId");
+            const passwordInput = document.getElementById("password");
+            const togglelink = document.getElementById("togglelink");
+            const closeModal = document.getElementById("closeModal");
+            const modalTitle = document.getElementById("modalTitle");
+
+            let isLoginMode = true;
+
+            accountimg.addEventListener("click", () => {
+                loginmodal.style.display = "flex";
+            });
+
+            closeModal.addEventListener("click", () => {
+                loginmodal.style.display = "none";
+            });
+
+            toggletext.addEventListener("click", (e) => {
+                e.preventDefault();
+                isLoginMode = !isLoginMode;
+
+                if (isLoginMode) {
+                    modalTitle.textContent = "Login";
+                    authbutton.textContent = "Login";
+                    toggletext.innerHTML = `Don't have an account? <a href="#" id="togglelink">Create Account</a>`;
+                } else {
+                    modalTitle.textContent = "Create Account";
+                    authbutton.textContent = "Sign up";
+                    toggletext.innerHTML = `Already have an account? <a href="#" id="togglelink">Login</a>`;
+                }
+            });
+
+            authForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const userId = userIdInput.value.trim();
+                const password = passwordInput.value.trim();
+
+                if (!userId || !password) {
+                    alert("Both fields are required.");
+                    return;
+                }
+
+                if (isLoginMode) {
+                    const storedUserId = localStorage.getItem("userid");
+                    const storedPassword = localStorage.getItem("password");
+
+                    if (storedUserId === userId && storedPassword === password) {
+                        alert("Login successful");
+                        loginModal.style.display = "none";
+                    } else {
+                        alert("Invalid credentials, please try again.");
+                    }
+                } else {
+                    localStorage.setItem("userid", userId);
+                    localStorage.setItem("password", password);
+                    alert("Account created successfully!");
+                    isLoginMode = true;
+                    modalTitle.textContent = "Login";
+                    authButton.textContent = "Login";
+                    toggleText.innerHTML = `Don't have an account? <a href="#" id="togglelink">Create Account</a>`;
+                }
+
+                userIdInput.value = "";
+                passwordInput.value = "";
+            });
+        });
+        
+        function toggleMenu() {
+  const navbarMenu = document.querySelector('.navbar ul');
+  navbarMenu.classList.toggle('active');
+}
+
+// Show/Hide Scroll Button based on scroll position
+const scrollBtn = document.getElementById("scrollBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+};
+
+// Scroll to Top Function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+    </script>
+
+</body>
+
+</html>
