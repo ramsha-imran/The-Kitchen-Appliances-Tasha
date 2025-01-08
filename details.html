@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="shortcut icon" href="/imaages/tashaa titlebar.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .details-container {
+            display: flex;
+            width: 80%;
+            background-color: rgb(241, 235, 227);
+            margin-left: 7rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+
+        .image-section {
+            width: 50%;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 80%;
+            height: 350px;
+            /* border-radius: 8px; */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-section {
+            width: 90%;
+
+        }
+
+        .details-section h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #b12027;
+        }
+
+        .details-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #090920;
+            margin: 0px;
+        }
+
+        .details-section h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            color: #090920;
+            padding: 10px;
+        }
+
+        .similar-products {
+            margin-top: 20px;
+        }
+
+        .similar-products h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 4px;
+            color: #090920;
+        }
+
+        #similar-products-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .similar-product-card {
+            width: 250px;
+            height: 400px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .similar-product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .similar-product-card h3 {
+            border-bottom: 1.2px solid #b12027;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .similar-product-card p {
+            font-size: 0.7rem;
+            margin-top: 5px;
+            color: #090920;
+        }
+
+        .similar-product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .similar-product-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .details-section button {
+            margin-left: 170px;
+            border-radius: 8px;
+        }
+
+        #similarProduct-price {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-top: 5px;
+            color: #b12027;
+        }
+
+        @media (max-width: 768px) {
+            .details-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-section,
+            .details-section {
+                width: 100%;
+                text-align: center;
+            }
+
+            #similar-products-container {
+                flex-direction: column;
+            }
+
+            .similar-product-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .final {
+            display: inline;
+        }
+
+        .inner-box {
+            width: 140px;
+            height: 70px;
+            border: 2px solid black;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner-box a {
+            text-decoration: none;
+            color: #090920;
+        }
+
+        .inner-box img {
+            height: 60px;
+            width: 60px;
+            align-items: center;
+
+        }
+
+        .box {
+            display: flex;
+            margin-top: 12px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <marquee scrollamount="7">
+            <div class="container">
+                <h3 class="title">
+                    <span class="title-word title-word-1">WELCOME</span>
+                    <span class="title-word title-word-2">TO</span>
+                    <span class="title-word title-word-3">TASHAA</span>
+                </h3>
+            </div>
+        </marquee>
+
+        <div class="support">
+            <ul>
+                <li class="dropdown"><a href="/home.html">HOME</a></li>
+                <li class="dropdown"><a href="#">SUPPORT <i class="fa-solid fa-chevron-down"></i></a>
+                    <div id="list-support">
+                        <ul>
+                            <li><a href="manuals.html"> Manuals</a></li>
+                            <li> <a href="expert-tips.html">Expert-Tips</a></li>
+                            <li> <a href="registration.html">Register Complain</a></li>
+                            <li> <a href="contact-us.html">Contact Us</a></li>
+                            <li> <a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="/store-locator.html">STORE LOCATOR</a></li>
+                <div class="side" id="cart">
+                    <div id="cart-icon" onclick="toggleCart()">&#128722;&#xfe0e;</div>
+                    <a href="#">Cart</a>
+                    <span id="cart-count">0</span>
+                </div>
+                <div class="side" id="account">
+                    <div id="accountimg">&#128104;&#xfe0e;</div>
+                    <a id="accountimg" href="#">Account</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div id="cart-container" style="display: none;">
+        <h1 id="cart-head"> YOUR SHOPPING CART!!!</h1> <br>
+        <div id="cart-items"></div>
+        <div class="btnn">
+            <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+            <button id="checkout">Checkout</button>
+            <button id="close-cart" onclick="toggleCart()">Close Cart</button>
+        </div>
+    </div>
+
+    <div id="loginModal" class="Modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal"> &times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <form id="authForm">
+                <input type="text" id="userId" placeholder="User ID" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit" id="authbutton">Login</button>
+            </form>
+            <p id="toggletext">
+                Don't have an account? <a href="#" id="togglelink">Create Account</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="/imaages/tasha-logo.png" alt="Tashaa Logo">
+    </div>
+
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul>
+            <li class="dropdown"><a href="/next-in-line.html" class="catg">UPCOMING PRODUCT</a></li>
+            <li class="dropdown">
+                <a href="cooking-ware.html" class="catg">COOKING WARE <i class="fa-solid fa-chevron-down"></i></a>
+                <div id="list-COOKINGWARE">
+                    <div class="dropdown-img"><img src="/imaages/cookingware/set.png" alt=""></div>
+
+                    <ul>
+                        <li><a href="/Cooking pots.html"> Cooking pots</a></li>
+                        <li> <a href="/Cooking Pans.html">Cooking Pans</a></li>
+                        <li><a href="/Frying Pans.html Pans.html">Frying Pans</a></li>
+                        <li><a href="/Cookware Sets.html">Cookware Sets</a></li>
+                        <li><a href="/Handis.html">Handis</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/Kadais.html"> Kadais [Karahi]</a></li>
+                        <li><a href="/Grill pans.html">Grill pans</a> </li>
+                        <li><a href="/Tawas.htm">Tawas</a></li>
+                        <li> <a href="/Egg Poachers.html">Egg Poachers</a></li>
+                        <li><a href="/Steamers.html">Steamers</a> </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown"><a href="/refrigeration.html" class="catg">REFRIGERATION <i
+                        class="fa-solid fa-chevron-down"></i></a>
+                <div id="list-refrigeration">
+                    <div class="dropdown-img"><img src="/imaages/Refrigerator/3.jpg" alt=""></div>
+                    <ul>
+                        <li><a href="/refrigerators.html"> Refrigerator</a></li>
+                        <li> <a href="/freezers">Freezer</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown"><a href="/appliances.html" class="catg">APPLIANCES <i
+                        class="fa-solid fa-chevron-down"></i></a>
+                <div id="list-appliances">
+                    <div class="dropdown-img"><img src="/imaages/appliances/1.jpg" alt=""></div>
+                    <ul>
+                        <li><a href="/Blenders.html"> Blenders</a></li>
+                        <li> <a href="/Coffee makers.html">Coffee makers</a></li>
+                        <li><a href="/bread makers.html">Bread makers</a></li>
+                        <li><a href="/Electric kettles.html">Electric kettles</a></li>
+                        <li><a href="/Food choppers.html">Food choppers</a></li>
+                        <li><a href="/Toasters.html">Toasters</a> </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown"><a href="/food-storage.html" class="catg">FOOD STORAGE <i
+                        class="fa-solid fa-chevron-down"></i></a>
+                <div id="list-storage">
+                    <div class="dropdown-img"><img src="/imaages/food strage/jars/food (3).jpg" alt=""></div>
+                    <ul>
+                        <li><a href="/Blenders.html"> Blenders</a></li>
+                        <li> <a href="/Coffee makers.html">Coffee makers</a></li>
+                        <li><a href="/bread makers.html">Bread makers</a></li>
+                        <li><a href="/Electric kettles.html">Electric kettles</a></li>
+                        <li><a href="/Food choppers.html">Food choppers</a></li>
+                        <li><a href="/Toasters.html">Toasters</a> </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="search"><input type="search" placeholder="search">
+            <!-- <i class='bx bx-search'></i> -->
+        </div>
+        </div>
+        <div id="cart-container" style="display: none;">
+            <h1 id="cart-head"> YOUR SHOPPING CART!!!</h1> <br>
+            <div id="cart-items"></div>
+            <div class="btnn">
+                <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+                <button id="checkout">Checkout</button>
+                <button id="close-cart" onclick="toggleCart()">Close Cart</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="details-container">
+            <div class="image-section" id="product-image">
+            </div>
+            <div class="final">
+                <div class="details-section" id="product-details"></div>
+                <div class="box">
+                    <div class="inner-box"><img src="imaages/swap.png" alt="" width="20"><a href="">Compare</a></div>
+                    <div class="inner-box"><img src="imaages/support.png" alt="" width="20"><a href="">Call Center</a>
+                    </div>
+                    <div class="inner-box"><img src="imaages/wrench (1).png" alt="" width="20"><a href="">Services</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="similar-products">
+            <h2>Similar Products</h2>
+            <div id="similar-products-container"></div>
+        </div>
+    </div>
+    <button id="scrollBtn" class="scroll-btn" onclick="scrollToTop()">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main-tittle">
+                <div class="typewriter">
+                    <h1>Tashaa</h1>
+                    <h1 id="store">The home store</h1>
+                </div>
+
+            </div>
+            <div class="footer-products">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="cooking-ware.html">Cooking Ware</a></li>
+                    <li><a href="refrigeration.html">Refrigeration</a></li>
+                    <li><a href="applainces.html">Applainces</a></li>
+                    <li><a href="food-storage.html">Food Storage</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-support">
+                <h3>Customer Support</h3>
+                <ul>
+                    <li><a href="manuals.html">Manuals</a></li>
+                    <li><a href="expert-tips.html">Expert Tips</a></li>
+                    <li><a href="registration.html">Register Complain</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contect">
+                <div class="contect-apps">
+                    <ul>
+                        <i class='bx bxl-facebook-circle'></i>
+                        <i class='bx bxl-instagram'></i>
+                        <i class='bx bxl-youtube'></i>
+                    </ul>
+                </div>
+                <div class="contect-tittle">
+                    <ul>
+                        <a href="#">
+                            <li class="small">Whatsapp Support Line</li>
+                        </a>
+                        <a href="#">
+                            <li>+92-311-111-7359</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="contect-tittle">
+                    <ul>
+                        <a href="#">
+                            <li class="small">7/24 Customer Support</li>
+                        </a>
+                        <a href="#">
+                            <li>021 111 11 7359</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-additional">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const products = [
+            {
+                id: 7,
+                imageUrl: "imaages/food strage/flask/organized-pantry_932514-18010.jpg",
+                name: "Butler's Pantry",
+                description: "A butler's pantry is a small room or area located between the kitchen and dining room.",
+                price: "Price: $80"
+            },
+            {
+                id: 8,
+                imageUrl: "imaages/food strage/flask/flaskslider.png",
+                name: "Freestanding Pantry",
+                description: "A freestanding pantry is a self-contained, moveable storage unit for food.",
+                price: "Price: $50"
+            },
+            {
+                id: 9,
+                imageUrl: "imaages/food strage/flask/kitchenware-wall_144627-46468.avif",
+                name: "Kitchenware",
+                description: "Kitchenware refers to the utensils, appliances, cookware, and dishes used in food preparation.",
+                price: "Price: $25.9"
+            },
+            {
+                id: 10,
+                imageUrl: "imaages/food strage/flask/tidy-up-concept-with-foodstuff-shelves_23-2148927374.avif",
+                name: "Shelves",
+                description: "Shelves are storage units used to hold cookware, dishes, food, and other kitchen essentials.",
+                price: "Price: $16.31"
+            },
+            {
+                id: 11,
+                imageUrl: "imaages/food strage/flask/close-up-food-preservation-method_23-2149185660.avif",
+                name: "Kitchen Wall Shelves",
+                description: "Kitchen wall shelves are space-saving storage solutions for spices, dinnerware, and other kitchen essentials.",
+                price: "Price: $50.43"
+            },
+            {
+                id: 1,
+                imageUrl: "imaages/appliances/coffee/1.jpg",
+                name: "Coffee Maker",
+                description: "Brews several cups in one go and Helpful digital display.",
+                price: "Price: $40.3",
+                category: "Coffee Maker"
+            },
+            {
+                id: 2,
+                imageUrl: "imaages/appliances/coffee/2.jpg",
+                name: "Electric Coffee Maker",
+                description: "Reliable for daily coffee needs and Insulated carafe keeps coffee warm.",
+                price: "Price: $48.5",
+                category: "Coffee Maker"
+            },
+            {
+                id: 3,
+                imageUrl: "imaages/appliances/coffee/3 (1).jpg",
+                name: "Automatic Coffee Maker",
+                description: "Simple, Classic brewing method and Easy to set up and clean",
+                price: "Price: $47.8",
+                category: "Coffee Maker"
+            },
+            {
+                id: 4,
+                imageUrl: "imaages/appliances/coffee/3 (2).jpg",
+                name: "Coffee Maker Set",
+                description: "Eco-friendly and easy to use and Brews many cups of coffee in just over a minute",
+                price: "Price: $39.09",
+                category: "Coffee Maker"
+            },
+            {
+                id: 5,
+                imageUrl: "imaages/appliances/coffee/4 (2).jpg",
+                name: "Coffee Maker Set",
+                description: "Eco-friendly and easy to use and Brews many cups of coffee in just over a minute",
+                price: "Price: $39.09",
+                category: "Coffee Maker"
+            },
+            {
+                id: 6,
+                imageUrl: "imaages/appliances/coffee/4 (1).jpg",
+                name: "Coffee Maker Set",
+                description: "Eco-friendly and easy to use and Brews many cups of coffee in just over a minute",
+                price: "Price: $39.09",
+                category: "Coffee Maker"
+            },
+            {
+                "id": 12,
+                "category": "Blender",
+                "imageUrl": "imaages/appliances/blenders/blender (1).jpg",
+                "name": "Juicer Blender",
+                "description": "These blenders typically feature powerful motors and specialized blades",
+                "price": "Price: $40.3"
+            },
+            {
+                "id": 13,
+                "category": "Blender",
+                "imageUrl": "imaages/appliances/blenders/blender (2).jpg",
+                "name": "Juicer Blender",
+                "description": "Easy to use and easy to clean",
+                "price": "Price: $38.8"
+            },
+            {
+                "id": 14,
+                "category": "Blender",
+                "imageUrl": "imaages/appliances/blenders/blender (3).jpg",
+                "name": "Juicer Blender",
+                "description": "Smooth blending, durable, easy to clean, versatile.",
+                "price": "Price: $39"
+            },
+            {
+                "id": 15,
+                "category": "Blender",
+                "imageUrl": "imaages/appliances/blenders/blender (4).jpg",
+                "name": "Electric Blender",
+                "description": "Quick Blending, durable, easy to use and clean.",
+                "price": "Price: $41.5"
+            },
+            {
+                "id": 16,
+                "category": "Blender",
+                "imageUrl": "imaages/appliances/blenders/blender (5).jpg",
+                "name": "Juicer Blender Set",
+                "description": "Blends, extracts juice, processes fruits, vegetables, smoothies, nutritious.",
+                "price": "Price: $30"
+            },
+            {
+                "id": 17,
+                "category": "Blender",
+                "imageUrl": "imaages/appliances/blenders/blender (6).jpg",
+                "name": "Juicer Blender Set",
+                "description": "New Design Blender with Stainless Steel Motor",
+                "price": "Price: $60.5"
+            },
+            {
+                id: 18,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 2.jpg",
+                name: "egg poaching pan",
+                description: "Quick, easy, perfect poached eggs every single time.",
+                price: "Price: $15.99"
+            },
+            {
+                id: 19,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 3.jpg",
+                name: "Egg Poacher",
+                description: "Eggssentials Poached Egg Maker, Stainless Steel Egg Poaching Pan, Poached Eggs Cooker.",
+                price: "Price: $27"
+            },
+            {
+                id: 20,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 4.jpg",
+                name: "2 cup egg poacher",
+                description: "Stainless Steel 2 Cup Egg Poacher, Non Stick Easy Use Kitchenware Rust Resistant Stove Top Breakfast Brunch Cooking Pan.",
+                price: "Price: $19"
+            },
+            {
+                id: 21,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 5.jpg",
+                name: "poached egg cooker",
+                description: "Eggssentials Egg Poacher Insert Stainless Steel Poached Egg Cooker Eggs Poaching Cup PFOA Free Egg Poachers Nonstick.",
+                price: "Price: $17"
+            },
+            {
+                id: 22,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 6.jpg",
+                name: "6 Cups Egg Poacher Pan",
+                description: "Stainless Steel Poached Egg Cooker Induction Cooktop Egg Poachers.",
+                price: "Price: $25"
+            },
+            {
+                id: 23,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 7.jpg",
+                name: "Nonstick Dishwasher Safe Egg Poacher Pan",
+                description: "Farberware Glide Ceramic Nonstick Dishwasher Safe Egg Poacher Pan/Skillet with 4 Poaching Cups 8 Inch.",
+                price: "Price: $20"
+            },
+            {
+                id: 24,
+                category: "Egg Poacher",
+                imageUrl: "/imaages/cookingware/egg/egg 2.jpg",
+                name: "Egg Poacher",
+                description: "Efficient egg poacher for perfectly cooked eggs every time.",
+                price: "Price: $18"
+            },
+            {
+                id: 25,
+                category: "Cookware",
+                imageUrl: "/imaages/cookingware/egg/egg 2.jpg",
+                name: "Aluminum Metal Finish Tawa",
+                description: "Cookware brings the Best Aluminum Tawa/Griddle/Paratha Pan with a Strong Wooden Handle.",
+                price: "Price: $25"
+            },
+            {
+                id: 31,
+                category: "Coffee Maker",
+                imageUrl: "/imaages/appliances/coffee/2.jpg",
+                name: "Coffee Maker",
+                description: "Brews coffee quickly, effortlessly, with rich flavor.",
+                price: "Price:$12.99"
+            },
+            {
+                id: 26,
+                category: "Kettle",
+                imageUrl: "/imaages/appliances/kettles/kettle (2).jpg",
+                name: "Silver Kettle",
+                description: "Elegant design, quick boiling, durable and stylish.",
+                price: "Price: $15.7"
+            },
+            {
+                id: 27,
+                category: "Toaster",
+                imageUrl: "/imaages/appliances/toasters/4.jpg",
+                name: "Toaster",
+                description: " Fast, even browning, sleek design, perfect toast every time.",
+                price: " Price: $30.9"
+            },
+            {
+                id: 28,
+                category: "Blender",
+                imageUrl: " /imaages/appliances/blenders/blender (12).jpg",
+                name: "Blender",
+                description: " Smooth blending, durable, easy to clean, versatile.",
+                price: "Price: $18.73"
+            },
+            {
+                id: 29,
+                category: "Chopper",
+                imageUrl: "/imaages/appliances/choppers/chopper (2).jpg",
+                name: " Chopper",
+                description: "Quick chopping, durable, easy to use and clean.",
+                price: " Price: $20.42"
+            },
+            {
+                id: 30,
+                category: "Coffee Maker",
+                imageUrl: "/imaages/appliances/coffee/3 (1).jpg",
+                name: "Coffee Maker",
+                description: " Brews rich coffee, fast, convenient, and easy cleanup.",
+                price: "Price: $35"
+            },
+            {
+                id: 32,
+                category: "pots",
+                imageUrl: "imaages/cookingware/pots/4.jpg",
+                name: "Ceramic Pot",
+                description: "Sleek and durable ceramic pot, perfect for daily use and decoration.",
+                price: "Price: $29.99"
+            },
+            {
+                id: 33,
+                category: "pots",
+                imageUrl: "imaages/cookingware/pots/7.webp",
+                name: "Cooking Pots",
+                description: "Durable off-white cooking pots, perfect for everyday meals and stylish kitchen décor.",
+                price: "Price: $25"
+            },
+            {
+                id: 34,
+                category: "frying pans",
+                imageUrl: "imaages/cookingware/frying pans/2.jpg",
+                name: "Frying Pan",
+                description: "Premium frying pan with a non-stick surface, designed for even heat distribution and easy cooking.",
+                price: "Price: $30"
+            },
+            {
+                id: 35,
+                category: "frying pans",
+                imageUrl: "imaages/cookingware/frying pans/7.jpg",
+                name: "Frying Pan",
+                description: "Durable frying pan with a smooth, non-stick coating, perfect for effortless cooking and easy cleanup.",
+                price: "Price: $15"
+            },
+            {
+                id: 36,
+                category: "karahi",
+                imageUrl: "imaages/cookingware/karahis/karahi 1.jpg",
+                name: "Kadais",
+                description: "Quality handis and kadais, ideal for cooking and serving flavorful meals.",
+                price: "Price: $25"
+            },
+            {
+                id: 37,
+                category: "tawa",
+                imageUrl: "imaages/cookingware/tawa/tawa4.png",
+                name: "Tawa",
+                description: "Durable tawa for even cooking, perfect for making flatbreads and frying.",
+                price: "Price: $20"
+            },
+            {
+                id: 38,
+                category: "grill pan",
+                imageUrl: "imaages/cookingware/grill pans/grill pan 6.jpg",
+                name: "Grill Frying Pan",
+                description: "Non-stick grill frying pan, perfect for cooking with grill marks and even heat distribution.",
+                price: "Price: $35"
+            },
+            {
+                id: 39,
+                category: "Egg Poacher",
+                imageUrl: "imaages/cookingware/egg/egg 4.jpg",
+                name: "Egg Poacher",
+                description: "Efficient egg poacher for perfectly cooked eggs every time.",
+                price: " Price: $18"
+            },
+            {
+                id: 40,
+                category: "kettle",
+                imageUrl: "imaages/appliances/kettles/kettle 4.jpg",
+                name: "Electric Kettle",
+                description: "Save time and kettles boil water faster than stovetops.",
+                price: " Price: $14.6"
+            },
+            {
+                id: 41,
+                category: "kettle",
+                imageUrl: "imaages/appliances/kettles/kettle 3.jpg",
+                name: "Automatic Kettle",
+                description: "Best for one individual, quick boiling, portable and stylish.",
+                price: "Price: $14.6"
+            },
+            {
+                id: 42,
+                category: "kettle",
+                imageUrl: "imaages/appliances/kettles/kettle (1).jpg",
+                name: "Deluxe Kettle",
+                description: "Energy efficient, Safe to use, Saves time.",
+                price: "Price: $30.2"
+            },
+            {
+                id: 43,
+                category: "kettle",
+                imageUrl: "imaages/appliances/kettles/kettle (2).jpg",
+                name: "Silver Kettle",
+                description: "Kettles automatically shut off once the water is boiled.",
+                price: "Price: $24.8"
+            },
+            {
+                id: 46,
+                category: "chopper",
+                imageUrl: "imaages/appliances/choppers/DALL·E 2024-12-25 09.47.33 - A high-definition image of an electric vegetable chopper with a sleek modern design, featuring a transparent bowl, stainless steel blades, and a compa.webp",
+                name: "Electric Vegetable Chopper",
+                description: "A sleek, efficient food chopper for precise and quick meal preparation.",
+                price: "$15.99"
+            },
+            {
+                id: 47,
+                category: "chopper",
+                imageUrl: "imaages/appliances/choppers/food chopper 2.webp",
+                name: "Electric Chopper",
+                description: "An Electric chopper is a powered kitchen appliance that efficiently chops, dices.",
+                price: "$17.7"
+            },
+            {
+                id: 48,
+                category: "chopper",
+                imageUrl: "imaages/appliances/choppers/DALL·E 2024-12-25 09.50.47 - A high-definition image of a manual food chopper, featuring a compact, ergonomic design. The chopper has a clear plastic body, a sharp stainless steel.webp",
+                name: "Manual Food Chopper",
+                description: "A manual food chopper is a hand-operated tool ideal for electricity-free meal prep.",
+                price: "$12.9"
+            },
+            {
+                id: 49,
+                category: "chopper",
+                imageUrl: "imaages/appliances/choppers/DALL·E 2024-12-25 09.57.44 - A high-definition image of a modern vegetable and fruit dicer. The device features a sturdy plastic body with sharp stainless steel blades arranged in.webp",
+                name: "Dicer",
+                description: "A kitchen tool for quickly slicing vegetables and fruits into uniform pieces.",
+                price: "$24.73"
+            },
+            {
+                id: 50,
+                category: "chopper",
+                imageUrl: "imaages/appliances/choppers/food chopper 1.webp",
+                name: "Kitchen Chopper",
+                description: "A Kitchen Chopper is a tool for quickly chopping, dicing, or mincing ingredients efficiently.",
+                price: "$22.22"
+            },
+            {
+                id: 51,
+                category: "chopper",
+                imageUrl: "imaages/appliances/choppers/food chopper 5.avif",
+                name: "Chopping Machine",
+                description: "A Chopping Machine rapidly chops, dices, or slices food for efficient meal preparation.",
+                price: "$30"
+            },
+            {
+                id: 52,
+                category: "bottles",
+                imageUrl: "imaages/food strage/bottles/bottles (3).jpg",
+                name: "Multicolor Bottle",
+                description: "Vibrant multicolor bottle, lightweight, durable, leakproof, stylish, ergonomic.",
+                price: "Price: $8"
+            },
+            {
+                id: 53,
+                category: "flask",
+                imageUrl: "imaages/food strage/flask/flask (2).jpg",
+                name: "ThermaFlow Flask",
+                description: "Sleek flask, insulated, durable, leakproof, lightweight, ergonomic, stylish.",
+                price: "Price: $15"
+            },
+            {
+                id: 54,
+                category: "jars",
+                imageUrl: "imaages/food strage/jars/jar (5).jpg",
+                name: "CrystalKeeper",
+                description: "Transparent glass jar, airtight, durable, versatile, elegant.",
+                price: "Price: $30.9"
+            },
+            {
+                id: 55,
+                category: "lunch box",
+                imageUrl: "imaages/food strage/lunch box/luch (2).jpg",
+                name: "SnackMate",
+                description: "Colorful, lightweight, eco-friendly, easy-to-carry, trendy.",
+                price: "Price: $10"
+            },
+            {
+                id: 56,
+                category: "storage bags",
+                imageUrl: "imaages/food strage/storage bags/bags (3).jpg",
+                name: "Bags",
+                description: "Durable, biodegradable, spacious, stylish, reusable, lightweight.",
+                price: "Price: $10"
+            },
+            {
+                id: 63,
+                category: "lunch box",
+                imageUrl: "/imaages/food strage/lunch box/luch (1).jpg",
+                name: "Fruit Yogurt Cups",
+                description: "Multi-layered insulated lunchbox for hot meals.",
+                price: "Price: $15"
+            },
+            {
+                id: 64,
+                category: "lunch box",
+                imageUrl: "/imaages/food strage/lunch box/luch (2).jpg",
+                name: "Korean Lunchbox",
+                description: "Healthy Korean-style lunch with rice and sides.",
+                price: "Price: $25"
+            },
+            {
+                id: 65,
+                category: "lunch box",
+                imageUrl: "/imaages/food strage/lunch box/luch (3).jpg",
+                name: "Colorful Lunch Tiffin",
+                description: "Fresh fruits with creamy yogurt in airtight containers.",
+                price: "Price: $10.9"
+            },
+            {
+                id: 66,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/4.jpg",
+                name: "Multi-door refrigerators",
+                description: "A multi-door refrigerator offers spacious compartments for organized storage.",
+                price: "Price: $800"
+            },
+            {
+                id: 67,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/8.jpg",
+                name: "Multi-door refrigerators",
+                description: "A multi-door refrigerator with advanced features, offering efficient cooling.",
+                price: "Price: $1500"
+            },
+            {
+                id: 68,
+                category: "freezer",
+                imageUrl: "imaages/Refrigerator/freezer/9.jpg",
+                name: "Frigidaire Upright Freezer",
+                description: "A vertical freezer provides organized, upright storage for frozen goods.",
+                price: "Price: $600.9"
+            },
+            {
+                id: 69,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/3.jpg",
+                name: "SnackMate",
+                description: "A single-door refrigerator offers compact storage with efficient cooling.",
+                price: "Price: $300"
+            },
+            {
+                id: 79,
+                category: "jars",
+                imageUrl: "imaages/food strage/jars/jar (4).jpg",
+                name: "Honey jar",
+                description: "A specialized jar designed for storing and serving honey.",
+                price: "Price: $10.12"
+            },
+            {
+                id: 80,
+                category: "jars",
+                imageUrl: "imaages/food strage/jars/jar (5).jpg",
+                name: "Ceramic Jar",
+                description: "A jar made from ceramic materials, often decorative and used for storing small items.",
+                price: "Price: $14.23"
+            },
+            {
+                id: 81,
+                category: "jars",
+                imageUrl: "imaages/food strage/jars/jar (6).jpg",
+                name: "Pantry Jar",
+                description: "A large, airtight jar used to store dry goods like flour, sugar.",
+                price: "Price: $22.19"
+            },
+            {
+                id: 82,
+                category: "jars",
+                imageUrl: "imaages/food strage/jars/jar (7).jpg",
+                name: "Storage Jar",
+                description: "A generic term for jars used to store food, household items, or craft supplies.",
+                price: "Price: $36.21"
+            },
+            {
+                id: 83,
+                category: "jars",
+                imageUrl: "imaages/food strage/jars/close-up-candies-table-against-white-background_1048944-17064458.avif",
+                name: "Mason Jar",
+                description: "A classic jar with a wide mouth and screw-on lid, often used for canning and preserving.",
+                price: "Price: $15.43"
+            },
+            {
+                id: 89,
+                category: "storage bags",
+                imageUrl: "/imaages/food strage/storage bags/bags (1).jpg",
+                name: "Canvas Tote Bag",
+                description: "Eco-friendly reusable bag with durable minimalist design.",
+                price: "Price: $10"
+            },
+            {
+                id: 90,
+                category: "storage bags",
+                imageUrl: "/imaages/food strage/storage bags/bags (2).jpg",
+                name: "Heavy-Duty Garbage Bags (Set of 5)",
+                description: "Handmade decorative basket, perfect for nuts or storage.",
+                price: "Price: $18"
+            },
+            {
+                id: 91,
+                category: "storage bags",
+                imageUrl: "/imaages/food strage/storage bags/bags (3).jpg",
+                name: "Crochet Storage Basket",
+                description: "Extra-thick bags with secure ties, for heavy loads.",
+                price: "Price: $25.9"
+            },
+            {
+                id: 94,
+                category: "tawa",
+                imageUrl: "/imaages/cookingware/tawa/tawa 1.webp",
+                name: "Premier Non-Stick Tawa",
+                description: "Non-stick tawa: durable, versatile, ridged, easy-clean.",
+                price: "Price: $20.99"
+            },
+            {
+                id: 95,
+                category: "tawa",
+                imageUrl: "/imaages/cookingware/tawa/tawa 2.webp",
+                name: "Hot Plate Non-stick Tawa",
+                description: "Non-Stick induction Tawa Cookware set Paratha Pan Baking Wooden Handle.",
+                price: "Price: $27"
+            },
+            {
+                id: 96,
+                category: "tawa",
+                imageUrl: "/imaages/cookingware/tawa/tawa3.webp",
+                name: "Non-stick Granite Marble Tawa",
+                description: "Multi-layered nonstick super standard tawa with handles.",
+                price: "Price: $19"
+            },
+            {
+                id: 97,
+                category: "tawa",
+                imageUrl: "/imaages/cookingware/tawa/tawa5.webp",
+                name: "Marble Coated Tawa",
+                description: "Durable tawa with marble coating for effortless cooking.",
+                price: "Price: $17"
+            },
+            {
+                id: 98,
+                category: "tawa",
+                imageUrl: "imaages/cookingware/tawa/tawa4.png",
+                name: "Tawa",
+                description: "Durable tawa for even cooking, perfect for making flatbreads and frying.",
+                price: "Price: $20"
+            },
+            {
+                id: 99,
+                category: "tawa",
+                imageUrl: "imaages/cookingware/tawa/tawa 8.png",
+                name: "Aluminum Metal Finish Tawa",
+                description: "Cookware brings the best aluminum tawa/griddle/paratha pan with a strong wooden handle.",
+                price: "Price: $25"
+            },
+            {
+                id: 100,
+                category: "toaster",
+                imageUrl: "imaages/appliances/toasters/2.jpg",
+                name: "Smart Toaster",
+                description: "High-tech toaster with features like touch screen.",
+                price: "Price: $9.99"
+            },
+            {
+                id: 101,
+                category: "toaster",
+                imageUrl: "imaages/appliances/toasters/5.jpg",
+                name: "2 Slice Toaster",
+                description: "Compact toaster for toasting two slices at once.",
+                price: "Price: $20.7"
+            },
+            {
+                id: 102,
+                category: "toaster",
+                imageUrl: "imaages/appliances/toasters/6.png",
+                name: "Conventional Toaster",
+                description: "A classic, simple toaster for toasting slices of bread.",
+                price: "Price: $11.9"
+            },
+            {
+                id: 103,
+                category: "toaster",
+                imageUrl: "imaages/appliances/toasters/kitchen.png",
+                name: "Kitchen Toaster",
+                description: "A kitchen toaster is a compact electrical appliance designed to toast slices.",
+                price: "Price: $18.73"
+            },
+            {
+                id: 104,
+                category: "toaster",
+                imageUrl: "imaages/appliances/toasters/smeg.png",
+                name: "Smeg Toaster",
+                description: "A Smeg toaster is a stylish retro-designed appliance.",
+                price: "Price: $25.22"
+            },
+            {
+                id: 105,
+                category: "toaster",
+                imageUrl: "imaages/appliances/toasters/stirling2.png",
+                name: "Stirling Toaster",
+                description: "A Stirling toaster is a high-end, retro-style toaster known for its sleek and advanced features.",
+                price: "Price: $29.99"
+            },
+            {
+                id: 106,
+                category: "bottles",
+                imageUrl: "/imaages/food strage/bottles/bottles (1).jpg",
+                name: "Vibrant Splash Water Bottles",
+                description: "Colorful, durable, leak-proof, eco-friendly, ergonomic water bottles.",
+                price: "Price: $13"
+            },
+            {
+                id: 107,
+                category: "bottles",
+                imageUrl: "/imaages/food strage/bottles/bottles (2).jpg",
+                name: "Arctic Chill Vacuum Bottle",
+                description: "Insulated, sleek, durable, leak-proof, keeps drinks hot/cold.",
+                price: "Price: $28"
+            },
+            {
+                id: 108,
+                category: "bottles",
+                imageUrl: "/imaages/food strage/bottles/5.jpg",
+                name: "Silver Stream Water Bottle",
+                description: "Sleek, durable, lightweight, leak-proof, eco-friendly hydration solution.",
+                price: "Price: $15.9"
+            },
+            {
+                id: 109,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/4.jpg",
+                name: "Multi-door refrigerators",
+                description: "A multi-door refrigerator offers spacious compartments for storage.",
+                price: "Price: $800"
+            },
+            {
+                id: 110,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/8.jpg",
+                name: "Multi-door refrigerators",
+                description: "A multi-door refrigerator with advanced features, offering efficient cooling.",
+                price: "Price: $1500"
+            },
+            {
+                id: 111,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/7.jpg",
+                name: "Frigidaire Upright refrigerator",
+                description: "Cool, spacious appliance for storing food and drinks.",
+                price: "Price: $510.9"
+            },
+            {
+                id: 112,
+                category: "refrigerator",
+                imageUrl: "imaages/Refrigerator/refrigerator/5.jpg",
+                name: "Small Refrigerator",
+                description: "Compact, energy-efficient, space-saving mini fridge for everyday use.",
+                price: "Price: $290"
+            }, {
+                id: 113,
+                category: "freezer",
+                imageUrl: "imaages/Refrigerator/freezer/10.jpg",
+                name: "Multi-door Freezer",
+                description: "A multi-door freezer offers spacious compartments for organized storage.",
+                price: "Price: $800"
+            },
+            {
+                id: 114,
+                category: "freezer",
+                imageUrl: "imaages/Refrigerator/freezer/9.jpg",
+                name: "Frigidaire Upright Freezer",
+                description: "A vertical freezer provides organized, upright storage for frozen goods.",
+                price: "Price: $600.9"
+            },
+            {
+                "id": 115,
+                "category": "cooking pan",
+                "imageUrl": "imaages/cookingware/cookingpans/4.jpg",
+                "name": "Non-Stick Cooking Pan",
+                "description": "A deeper, wider non-stick cooking pan ideal for preparing sauces, stews, and one-pot meals with even heat distribution.",
+                "price": "Price: $39.99"
+            },
+            {
+                "id": 116,
+                "category": "cooking pan",
+                "imageUrl": "imaages/cookingware/cookingpans/5.jpg",
+                "name": "Cast Iron Cooking Pan",
+                "description": "Durable cast iron cooking pan perfect for slow cooking, roasting, and stews, with excellent heat retention.",
+                "price": "Price: $49.50"
+            },
+            {
+                "id": 117,
+                "category": "cooking pan",
+                "imageUrl": "imaages/cookingware/cookingpans/6.jpg",
+                "name": "Stainless Steel Cooking Pan",
+                "description": "Stainless steel cooking pan designed for professional-grade performance.",
+                "price": "Price: $54.95"
+            },
+            {
+                "id": 118,
+                "category": " cooking pan",
+                "imageUrl": "imaages/cookingware/cookingpans/7.jpg",
+                "name": "Aluminum Cooking Pan Set",
+                "description": "Lightweight aluminum cooking pan set, perfect for everyday use.",
+                "price": "Price: $34.99"
+            },
+            {
+                "id": 123,
+                "category": "pots",
+                "imageUrl": "imaages/cookingware/pots/4.jpg",
+                "name": "Non-Stick Cooking Pot",
+                "description": "Deep non-stick pot for stews and soups.",
+                "price": "Price: $39.99"
+            },
+            {
+                "id": 124,
+                "category": " pots",
+                "imageUrl": "imaages/cookingware/pots/1.png",
+                "name": "Cast Iron Cooking Pot",
+                "description": "Durable pot for slow cooking and roasting.",
+                "price": "Price: $49.50"
+            },
+            {
+                "id": 125,
+                "category": " pots",
+                "imageUrl": "imaages/cookingware/pots/10.jpg",
+                "name": "Stainless Steel Cooking Pot",
+                "description": "Professional-grade steel pot for all uses.",
+                "price": "Price: $54.95"
+            },
+            {
+                "id": 126,
+                "category": " pots",
+                "imageUrl": "imaages/cookingware/pots/10.png",
+                "name": "Aluminum Cooking Pot",
+                "description": "Lightweight pot for everyday cooking.",
+                "price": "Price: $34.99"
+            },
+            {
+                "id": 127,
+                "category": " pots",
+                "imageUrl": "imaages/cookingware/pots/8.jpg",
+                "name": "Copper Cooking Pot",
+                "description": "Elegant copper pot for quick heating.",
+                price: "Price: $69.99"
+            },
+
+            {
+                "id": 128,
+                "category": "cookware set",
+                "imageUrl": "imaages/cookingware/cook ware sets/1.jpg",
+                "name": "Non-Stick Cookware Set",
+                "description": "A versatile non-stick cookware set with pans and pots, perfect for preparing sauces, stews, and frying with even heat distribution.",
+                "price": "Price: $79.99"
+            },
+            {
+                "id": 129,
+                "category": "cookware set",
+                "imageUrl": "imaages/cookingware/cook ware sets/2.jpg",
+                "name": "Cast Iron Cookware Set",
+                "description": "Durable cast iron cookware set, including skillets and a Dutch oven, ideal for slow cooking, roasting, and stews.",
+                "price": "Price: $119.50"
+            },
+            {
+                "id": 130,
+                "category": "cookware set",
+                "imageUrl": "imaages/cookingware/cook ware sets/3.jpg",
+                "name": "Cast Iron Cookware Set",
+                "description": "Durable cast iron cookware set, including skillets and a Dutch oven, ideal for slow cooking, roasting, and stews.",
+                "price": "Price: $119.50"
+            },
+            {
+                "id": 131,
+                "category": "frying pan",
+                "imageUrl": "imaages/cookingware/frying pans/4.jpg",
+                "name": "Non-Stick Frying Pan",
+                "description": "A high-quality non-stick frying pan ideal for making pancakes, eggs, and sautéed dishes with effortless cleaning.",
+                "price": "Price: $29.99"
+            },
+            {
+                "id": 132,
+                "category": "frying pan",
+                "imageUrl": "imaages/cookingware/frying pans/6.jpg",
+                "name": "Cast Iron Frying Pan",
+                "description": "Heavy-duty cast iron frying pan offering superior heat retention, perfect for searing, grilling, and frying.",
+                "price": "Price: $39.50"
+            },
+            {
+                "id": 133,
+                "category": "frying pan",
+                "imageUrl": "imaages/cookingware/frying pans/44.jpg",
+                "name": "Stainless Steel Frying Pan",
+                "description": "Professional-grade stainless steel frying pan with an ergonomic handle, ideal for evenly cooked meals.",
+                "price": "Price: $44.95"
+            },
+            {
+                "id": 134,
+                "category": "frying pan",
+                "imageUrl": "imaages/cookingware/frying pans/10.jpg",
+                "name": "Aluminum Frying Pan Set",
+                "description": "Lightweight aluminum frying pan set for everyday cooking, offering quick heat distribution and easy handling.",
+                "price": "Price: $24.99"
+            },
+            {
+                "id": 135,
+                "category": "frying pan",
+                "imageUrl": "imaages/cookingware/frying pans/5.jpg",
+                "name": "Copper Frying Pan",
+                "description": "Premium copper frying pan with excellent heat conductivity, perfect for delicate cooking like sauces and fish.",
+                "price": "Price: $59.99"
+            }, {
+                "id": 136,
+                "category": "handi",
+                "imageUrl": "imaages/cookingware/handi/handi (1).jpg",
+                "name": "Non-Stick Handi",
+                "description": "A versatile non-stick handi, ideal for cooking curries, biryanis, and slow-cooked meals with minimal oil.",
+                "price": "Price: $34.99"
+            },
+            {
+                "id": 137,
+                "category": "handi",
+                "imageUrl": "imaages/cookingware/handi/handi (2).jpg",
+                "name": "Cast Iron Handi",
+                "description": "Heavy-duty cast iron handi offering superior heat retention, perfect for slow-cooking stews, curries, and one-pot meals.",
+                "price": "Price: $44.50"
+            },
+            {
+                "id": 138,
+                "category": "handi",
+                "imageUrl": "imaages/cookingware/handi/handi (3).jpg",
+                "name": "Stainless Steel Handi",
+                "description": "Premium stainless steel handi with a polished finish, great for preparing and serving traditional dishes.",
+                "price": "Price: $49.95"
+            },
+            {
+                "id": 139,
+                "category": "karahi",
+                "imageUrl": "imaages/cookingware/karahis/karahi 1.jpg",
+                "name": "Non-Stick Karahi",
+                "description": "A high-quality non-stick karahi, perfect for frying, sautéing, and preparing traditional dishes with ease.",
+                "price": "Price: $39.99"
+            },
+            {
+                "id": 140,
+                "category": "karahi",
+                "imageUrl": "imaages/cookingware/karahis/karahi 2.jpg",
+                "name": "Cast Iron Karahi",
+                "description": "Heavy-duty cast iron karahi, ideal for slow cooking, frying, and achieving authentic flavors in every meal.",
+                "price": "Price: $49.50"
+            },
+            {
+                "id": 141,
+                "category": "karahi",
+                "imageUrl": "imaages/cookingware/karahis/karahi 3.jpg",
+                "name": "Stainless Steel Karahi",
+                "description": "Premium stainless steel karahi with excellent heat distribution, designed for professional-grade cooking.",
+                "price": "Price: $54.95"
+            },
+            {
+                "id": 142,
+                "category": "karahi",
+                "imageUrl": "imaages/cookingware/karahis/karahi 4.jpg",
+                "name": "Copper Karahi",
+                "description": "Traditional copper karahi with unmatched heat conductivity, perfect for cooking rich curries and fried delicacies.",
+                "price": "Price: $69.99"
+            },
+            {
+                "id": 143,
+                "category": "karahi",
+                "imageUrl": "imaages/cookingware/karahis/5.jpg",
+                "name": "Hard-Anodized Karahi",
+                "description": "Durable hard-anodized karahi with a non-stick coating, ideal for both everyday meals and festive preparations.",
+                "price": "Price: $64.75"
+            },
+            {
+                "id": 144,
+                "category": "karahi",
+                "imageUrl": "imaages/cookingware/karahis/delicious-pakistani-dish-high-angle.jpg",
+                "name": "Aluminum Karahi",
+                "description": "Lightweight aluminum karahi for quick and efficient cooking, designed with ergonomic handles for easy handling.",
+                "price": "Price: $34.99"
+            }
+
+        ];
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        const product = products.find(p => p.id === productId);
+
+
+        const productImageContainer = document.getElementById('product-image');
+        const productDetailsContainer = document.getElementById('product-details');
+
+        if (product) {
+            productImageContainer.innerHTML = `<img src="${product.imageUrl}" alt="${product.name}" class="product-image">`;
+            productDetailsContainer.innerHTML = `
+                <h1>${product.name}</h1>
+                <p>${product.description}</p>
+                <h2>${product.price}</h2>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            `;
+
+
+            const similarProductsContainer = document.getElementById('similar-products-container');
+            const similarProducts = products.filter(p => p.category === product.category && p.id !== productId);
+            similarProducts.forEach(similarProduct => {
+                const card = document.createElement('div');
+                card.className = 'similar-product-card';
+                card.innerHTML = `
+                    <a href="details.html?id=${similarProduct.id}">
+                        <img src="${similarProduct.imageUrl}" alt="${similarProduct.name}">
+                        <h3>${similarProduct.name}</h3>
+                        <p>${similarProduct.description}</p>
+                        <p id="similarProduct-price">${similarProduct.price}</p>
+                        <button onclick="addToCart(${product.id})">Add to Cart</button>
+                    </a>
+                `;
+                similarProductsContainer.appendChild(card);
+            });
+        } else {
+            productDetailsContainer.innerHTML = '<p>Product not found.</p>';
+        }
+
+
+        function addToCart(productId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const product = products.find(p => p.id === productId);
+
+            if (product) {
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+            }
+        }
+        window.onload = function () {
+            updateCartCount();
+        };
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = cart.length;
+            const cartCountElement = document.getElementById('cart-count');
+
+            if (cartCountElement) {
+                cartCountElement.innerText = cartCount;
+            }
+        }
+
+        function toggleCart() {
+            const cartContainer = document.getElementById('cart-container');
+            if (cartContainer.style.display === 'none') {
+                cartContainer.style.display = 'block';
+                displayCart();
+            } else {
+                cartContainer.style.display = 'none';
+            }
+        }
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p id="cart-para" >Your cart is empty.</p>';
+            } else {
+                cart.forEach(item => {
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `
+                <img src="${item.imageUrl}" alt="${item.name}" class="product-image">
+                <h4>${item.name}</h4>
+                <p>${item.price}</p>
+            `;
+                    cartItemsContainer.appendChild(cartItem);
+                });
+            }
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCart();
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            displayProductCards();
+            updateCartCount();
+        });
+        if (window.location.pathname.includes('cart')) {
+            displayCart();
+        }
+
+
+        if (window.location.pathname.includes('cart')) {
+            displayCart();
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginmodal = document.getElementById("loginModal");
+            const accountimg = document.getElementById("accountimg");
+            const authbutton = document.getElementById("authbutton");
+            const toggletext = document.getElementById("toggletext");
+            const authForm = document.getElementById("authForm");
+            const userIdInput = document.getElementById("userId");
+            const passwordInput = document.getElementById("password");
+            const togglelink = document.getElementById("togglelink");
+            const closeModal = document.getElementById("closeModal");
+            const modalTitle = document.getElementById("modalTitle");
+
+            let isLoginMode = true;
+
+            accountimg.addEventListener("click", () => {
+                loginmodal.style.display = "flex";
+            });
+
+            closeModal.addEventListener("click", () => {
+                loginmodal.style.display = "none";
+            });
+
+            toggletext.addEventListener("click", (e) => {
+                e.preventDefault();
+                isLoginMode = !isLoginMode;
+
+                if (isLoginMode) {
+                    modalTitle.textContent = "Login";
+                    authbutton.textContent = "Login";
+                    toggletext.innerHTML = `Don't have an account? <a href="#" id="togglelink">Create Account</a>`;
+                } else {
+                    modalTitle.textContent = "Create Account";
+                    authbutton.textContent = "Sign up";
+                    toggletext.innerHTML = `Already have an account? <a href="#" id="togglelink">Login</a>`;
+                }
+            });
+
+            authForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const userId = userIdInput.value.trim();
+                const password = passwordInput.value.trim();
+
+                if (!userId || !password) {
+                    alert("Both fields are required.");
+                    return;
+                }
+
+                if (isLoginMode) {
+                    const storedUserId = localStorage.getItem("userid");
+                    const storedPassword = localStorage.getItem("password");
+
+                    if (storedUserId === userId && storedPassword === password) {
+                        alert("Login successful");
+                        loginModal.style.display = "none";
+                    } else {
+                        alert("Invalid credentials, please try again.");
+                    }
+                } else {
+                    localStorage.setItem("userid", userId);
+                    localStorage.setItem("password", password);
+                    alert("Account created successfully!");
+                    isLoginMode = true;
+                    modalTitle.textContent = "Login";
+                    authButton.textContent = "Login";
+                    toggleText.innerHTML = `Don't have an account? <a href="#" id="togglelink">Create Account</a>`;
+                }
+
+                userIdInput.value = "";
+                passwordInput.value = "";
+            });
+        });
+        localStorage.setItem('products', JSON.stringify(products));
+    </script>
+</body>
+
+</html>
